@@ -1,3 +1,51 @@
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilos del contenedor principal */
+  .content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Estilos para el título principal */
+  .content h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  /* Estilos para las listas */
+  .content ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+ .content li {
+    margin-bottom: 10px;
+  }
+  
+  /* Estilos para los títulos secundarios */
+ .content h2 {
+    margin-top: 40px;
+  }
+  
+  /* Estilos para los párrafos */
+  .content p {
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos para la presentación */
+  .presentacion {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
 /* Hacer la barra de navegación fija en la parte superior */
 .navbar {
     position: fixed;
