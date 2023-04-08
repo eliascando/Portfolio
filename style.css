@@ -126,7 +126,7 @@
 .iconos-especialidades img {
   width: 20%;
   height: 20%;
-  margin: 0 25px;
+  margin: 0 20px;
   opacity: 0.6;
   transition: opacity 0.2s ease-in-out;
 }
@@ -159,7 +159,7 @@
 .iconos-herramientas img {
   width: 20%;
   height: 20%;
-  margin: 0 25px;
+  margin: 0 20px;
   opacity: 0.6;
   transition: opacity 0.2s ease-in-out;
 }
@@ -211,29 +211,44 @@ footer {
 
 .footer-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
 .left-section {
-  flex: 1;
   text-align: left;
 }
 
 .right-section {
-  flex: 1;
   text-align: right;
 }
 
-@media screen and (max-width: 767px) {
+/* Media queries */
+@media (max-width: 767px) {
+  /* Estilos para dispositivos móviles */
   .footer-container {
     flex-direction: column;
   }
 
-  .left-section,
+  .left-section {
+    text-align: center;
+  }
+
   .right-section {
     text-align: center;
-    margin-bottom: 10px;
+    margin-top: 20px; /* separación entre las secciones */
+  }
+}
+
+@media (min-width: 768px) {
+  /* Estilos para pantallas de escritorio */
+  .left-section {
+    text-align: left;
+  }
+
+  .right-section {
+    text-align: right;
   }
 }
 
