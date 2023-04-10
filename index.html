@@ -5,19 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elías Cando</title>
-    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="style.css"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Signika+Negative&family=Trocchi&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fd4a3466e6.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="projects.html">Proyectos</a></li>
-            <li><a href="contact.html">Contacto</a></li>
-        </ul>
-    </nav>  
+  <header>
+    <div class="navbar">
+      <div class="logo"><a href="index.html">CanDo</a></div>
+      <ul class="links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="projects.html">Proyectos</a></li>
+        <li><a href="acerca.html">Acerca de mí</a></li>
+      </ul>
+      <a href="mailto:elias.candoj@gmail.com" class="action_btn">Enviar Correo</a>
+      <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <div class="dropdown_menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="projects.html">Proyectos</a></li>
+        <li><a href="acerca.html">Acerca de mí</a></li>
+        <li><a href="#" class="action_btn">Enviar Correo</a></li>
+      </div> 
+  </div> 
+  </header>
+    <script>
+      const toggleBtn = document.querySelector('.toggle_btn')
+      const toggleBtnIcon = document.querySelector('.toggle_btn i')
+      const dropDownMenu = document.querySelector('.dropdown_menu')
+
+      toggleBtn.onclick = function(){
+        dropDownMenu.classList.toggle('open')
+        const isOpen = dropDownMenu.classList.contains('open')
+
+        toggleBtnIcon.classList = isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars'
+      }   
+    </script>     
     <main class="content">
         <h1>Desarrollador de Software</h1>
         <p class="presentacion">¡Hola! Soy Elías Cando, un desarrollador de software apasionado por la creación de soluciones de calidad y la mejora continua.</p>
@@ -25,8 +54,8 @@
             <h2>Especialidades</h2>
             <ul>
               <li>Desarrollo de aplicaciones de escritorio con C# y Visual Studio</li>
-              <li>Gestión y modelado de bases de datos con PostgreSQL y SQL Server</li>
-              <li>Creación páginas web con HTML, CSS y JavaScript - Frontend Developer</li>
+              <li>Gestión y modelado de bases de datos SQL con SQL Server y PostgreSQL</li>
+              <li>Creación de páginas web con HTML, CSS y JavaScript - Frontend Developer</li>
             </ul>
             <div class="iconos-especialidades">
                 <img src="resources/csharp-icon.png" alt="CSharp">
@@ -52,20 +81,25 @@
             <h2>Aprendizaje continuo</h2>
             <p>Siempre estoy dispuesto a aprender cosas nuevas y mantenerme actualizado en las últimas tendencias y tecnologías.</p>   
         </div>
-      </main> 
+      </main>
       <footer>
         <div class="footer-container">
-          <div class="left-section">
-            <p>
-                <cite>
-                    "El éxito es la suma de pequeños esfuerzos repetidos día tras día." - Robert Collier
-                </cite>
-            </p>
+          <div class="up-section">
+            <div class="cita">
+              <cite>
+                Disfruta el camino, ayuda al projimo y aprende sobre lo concluido
+              </cite>
+            </div>
+            <div class="redes">
+              <a href="https://github.com/eliascando" target="_blank"><img src="resources/github-negative-icon.png" alt="GitHub"></a>
+              <a href="https://www.instagram.com/cando.elias/" target="_blank"><img src="resources/instagram-negative-icon.png" alt="Instagram"></a>
+              <a href="https://www.linkedin.com/in/eliascando/" target="_blank"><img src="resources/linkedin-negative-icon.png" alt="LinkedIn"></a>
           </div>
-          <div class="right-section">
-            <p>&copy; 2023 Elías Cando</p>
+          </div>
+          <div class="bottom-section">
+            <p>&copy; Elías Cando 2023</p>
           </div>
         </div>
-      </footer>      
+      </footer>
 </body>
 </html>

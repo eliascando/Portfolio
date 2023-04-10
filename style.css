@@ -1,5 +1,5 @@
-/* Estilos generales */
-* {
+/*========ESTILOS GENERALES===============================*/
+  * {
     font-family: 'Nunito', sans-serif;
     text-align: justify;
     box-sizing: border-box;
@@ -8,6 +8,159 @@
   }
   body{
     background-color: #81B29A;
+    height: 100vh;
+  }
+  .navbar li {
+    list-style: none;
+  }
+  a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+  }
+  a:hover{
+    color:orange
+  }
+/*==========HEADER==========================================*/
+  header{
+    position: relative;
+    padding: 0 2rem;
+  }
+/*=============BARRA DE NEVEGACIÓN==========================*/
+  .navbar {
+    width: 100%;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #011627;
+    z-index: 9999;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navbar li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    display: block;
+    padding: 100px 20px;
+    background-color: none;
+    margin: 10 20;
+    text-align: center;
+    transition: background-color 0.3s ease-in-out;
+  }
+  .navbar .logo a{
+    padding: 15px 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .navbar .links{
+    display: flex;
+    gap: 2rem;
+  }
+  .navbar .toggle_btn{
+    color: white;
+    font-size: 1.5rem;
+    padding: 15px 15px;
+    cursor: pointer;
+    display: none;
+  }
+  .action_btn{
+    background-color: orange;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease ;
+  }
+  .action_btn:hover{
+    scale: 1.05;
+    color: #fff;
+  }
+  .action_btn:active{
+    scale: 0.95;
+  }
+/*========DROPDOWN MENU==================================*/
+  .dropdown_menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 63px;
+    height: 0;
+    width: 300px;
+    background: #011627;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .dropdown_menu li{
+    height: 33%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .dropdown_menu .action_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .dropdown_menu.open{
+    height: 600px;
+  }
+  .dropdown_menu a:active{
+    color: orange;
+  }
+/*========RESPONSIVE DESIGN================================*/
+  @media(max-width: 992px) {
+    .navbar .links,
+    .navbar .action_btn{
+      display: none;
+    }
+    .navbar .toggle_btn{
+      display: block;
+    }
+    .dropdown_menu{
+      display: block;
+    }
+    iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  }
+  @media(max-width: 576px) {
+    .dropdown_menu{
+      left: 2rem;
+      width: unset;
+    }
+    .navbar .toggle_btn{
+      display: block;
+    }
+  }
+
+  .iframe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Establece la altura completa del viewport */
+  }
+  
+  iframe {
+    width: 80%;
+    height: 80%;
+    border: none;
+  }
+  
+  .aviso{
+    text-align: center;
   }
   /* Estilos del contenedor principal */
   .content {
@@ -44,56 +197,10 @@
     line-height: 1.5;
   }
 
-/* Hacer la barra de navegación fija en la parte superior */
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #011627;
-    z-index: 9999;
-}
-
-/* Alinear los elementos de la barra de navegación horizontalmente */
-.navbar ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-/* Hacer que los elementos de la barra de navegación sean responsivos */
-.navbar li {
-    flex: 1 0 auto;
-    margin: 10px;
-    text-align: center;
-}
-
-/* Hacer que los enlaces de la barra de navegación sean responsivos */
-.navbar li a {
-    display: block;
-    padding: 10px 20px;
-    background-color: none;
-    margin: auto;
-    color: #fff;
-    text-decoration: none;
-    text-align: center;
-    transition: background-color 0.3s ease-in-out;
-}
-
 /* La altura de la barra de navegación */
 .content{
-    margin-top: 80px; 
+    margin-top: 80px;
 }
-.proyectos{
-  margin-top: 80px; 
-}
-.contact{
-  margin-top: 80px; 
-}
-
 /*Bloque de Especialidades*/
 .especialidades {
   background-color: #F4F1DE;
@@ -114,7 +221,6 @@
   list-style: none;
   margin: 20px; 
 }
-
 .iconos-especialidades {
   position: relative;
   display: flex;
@@ -122,7 +228,6 @@
   width: 100%;
   padding: 0;
 }
-
 .iconos-especialidades img {
   width: 20%;
   height: 20%;
@@ -130,7 +235,6 @@
   opacity: 0.6;
   transition: opacity 0.2s ease-in-out;
 }
-
 .iconos-especialidades img:hover {
   opacity: 1;
 }
@@ -155,7 +259,6 @@
   width: 100%;
   padding: 0;
 }
-
 .iconos-herramientas img {
   width: 20%;
   height: 20%;
@@ -163,15 +266,12 @@
   opacity: 0.6;
   transition: opacity 0.2s ease-in-out;
 }
-
 .iconos-herramientas img:hover {
   opacity: 1;
 }
-
 .herramientas h2 {
   text-align: center;
 }
-
 .herramientas ul {
   list-style: none;
   margin: 20px;
@@ -190,7 +290,6 @@
   justify-content: center;
   position: relative;
 }
-
 .aprendizaje h2{
   text-align: center;
   padding: 10px;
@@ -203,77 +302,61 @@
 /*FOOTER*/
 footer {
   background-color: #333;
-  color: #fff;
+  color: black;
   font-size: 14px;
   text-align: center;
   padding: 20px;
 }
-
 .footer-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  min-height: 10vh;
+}
+.up-section{
+  display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 120%;
+  padding: 10px;
 }
-
-.left-section {
-  text-align: left;
+.cita{
+  flex: 1;
+  color: white;
 }
-
-.right-section {
-  text-align: right;
+.redes{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 25px;
+  flex: 1;
 }
-
-/* Media queries */
+.bottom-section {
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.redes img{
+  width: 60px;
+  height: 60px;
+}
 @media (max-width: 767px) {
   /* Estilos para dispositivos móviles */
+  /*FOOTER*/
   .footer-container {
     flex-direction: column;
   }
-
-  .left-section {
+  .up-section{
+    flex-direction: column;
+  }
+  .cita{
+    margin-bottom: 25px;
     text-align: center;
   }
-
-  .right-section {
-    text-align: center;
-    margin-top: 20px; /* separación entre las secciones */
+  .redes img{
+    /*CAMBIAR TAMAÑO DE IMAGENES*/
+    width: 50px;
+    height: 50px;
   }
-}
-
-@media (min-width: 768px) {
-  /* Estilos para pantallas de escritorio */
-  .left-section {
-    text-align: left;
-  }
-
-  .right-section {
-    text-align: right;
-  }
-}
-
-/*CONTACT*/
-
-/*Redes*/
-.contact {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.redes {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
-
-.redes img {
-  width: 70px;
-  height: 70px;
-}
-.redes h1{
-  text-align: center;
-  
 }
