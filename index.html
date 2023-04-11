@@ -5,18 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
-    <link rel="icon" type="png" href="resources/cando-logo-short.png">
-    <script src="index.js"></script>
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="icon" type="png" href="resources/img/cando-logo-short.png">
+    <link rel="stylesheet" href="resources/css/style.css">
+    <script type="module" src="index.js"></script> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Signika+Negative&family=Trocchi&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/fd4a3466e6.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body>  
   <header>
     <div class="navbar">
-      <div class="logo-wide"><a href="index.html"><img src="resources/cando-logo-wide.png" alt="CanDo"></a></div>
+      <div class="logo-wide">
+        <a href="index.html"><img src="../resources/img/cando-logo-wide.png" alt="CanDo"></a>
+      </div>
       <ul class="links">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="projects.html">Proyectos</a></li>
@@ -30,76 +32,66 @@
         <li><a href="projects.html">Proyectos</a></li>
         <li><a href="acerca.html">Acerca de mí</a></li>
       </div> 
-  </div> 
+    </div> 
   </header>
-    <script>
-      const toggleBtn = document.querySelector('.toggle_btn')
-      const toggleBtnIcon = document.querySelector('.toggle_btn i')
-      const dropDownMenu = document.querySelector('.dropdown_menu')
 
-      toggleBtn.onclick = function(){
-        dropDownMenu.classList.toggle('open')
-        const isOpen = dropDownMenu.classList.contains('open')
+  <main class="content">
+    <h1>Desarrollador de Software</h1>
+    <p class="presentacion">¡Hola! Soy Elías Cando, un desarrollador de software apasionado por la creación de soluciones de calidad y la mejora continua.</p>
+    
+    <div class="especialidades">
+      <h2>Especialidades</h2>
+      <ul>
+        <li>Desarrollo de aplicaciones de escritorio con C# y Visual Studio</li>
+        <li>Gestión y modelado de bases de datos SQL con SQL Server y PostgreSQL</li>
+        <li>Creación de páginas web con HTML, CSS y JavaScript - Frontend Developer</li>
+      </ul>
+      <div class="iconos-especialidades">
+        <img src="resources/img/csharp-icon.png" alt="CSharp">
+        <img src="resources/img/sqlserver-icon.png" alt="SQLServer">
+        <img src="resources/img/htmlcssjs-icon.png" alt="HTML-CSS-JS">
+      </div>
+    </div>
 
-        toggleBtnIcon.classList = isOpen
-        ? 'fa-solid fa-xmark'
-        : 'fa-solid fa-bars'
-      }   
-    </script>     
-    <main class="content">
-        <h1>Desarrollador de Software</h1>
-        <p class="presentacion">¡Hola! Soy Elías Cando, un desarrollador de software apasionado por la creación de soluciones de calidad y la mejora continua.</p>
-        <div class="especialidades">
-            <h2>Especialidades</h2>
-            <ul>
-              <li>Desarrollo de aplicaciones de escritorio con C# y Visual Studio</li>
-              <li>Gestión y modelado de bases de datos SQL con SQL Server y PostgreSQL</li>
-              <li>Creación de páginas web con HTML, CSS y JavaScript - Frontend Developer</li>
-            </ul>
-            <div class="iconos-especialidades">
-                <img src="resources/csharp-icon.png" alt="CSharp">
-                <img src="resources/sqlserver-icon.png" alt="SQLServer">
-                <img src="resources/htmlcssjs-icon.png" alt="HTML-CSS-JS">
+    <div class="herramientas">    
+      <h2>Herramientas y metodologías</h2>
+      <ul>
+        <li>Gestión de proyectos de software utilizando metodologías ágiles</li>
+        <li>Experiencia en el uso de Git y GitHub</li>
+        <li>Creación de entornos en la nube con Azure SQL Database</li>
+      </ul>
+      <div class="iconos-herramientas">
+          <img src="resources/img/git-icon.png" alt="Git">
+          <img src="resources/img/github-icon.png" alt="GitHub">
+          <img src="resources/img/azureSQL-icon.png" alt="Azure SQL">
+      </div>
+    </div>
 
-            </div>
+    <div class="aprendizaje">
+      <h2>Aprendizaje continuo</h2>
+      <p>Siempre estoy dispuesto a aprender cosas nuevas y mantenerme actualizado en las últimas tendencias y tecnologías.</p>   
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="up-section">
+        <div class="cita">
+          <cite>
+            Disfruta el camino, ayuda al projimo y aprende sobre lo concluido
+          </cite>
         </div>
-        <div class="herramientas">    
-            <h2>Herramientas y metodologías</h2>
-            <ul>
-              <li>Gestión de proyectos de software utilizando metodologías ágiles</li>
-              <li>Experiencia en el uso de Git y GitHub</li>
-              <li>Creación de entornos en la nube con Azure SQL Database</li>
-            </ul>
-            <div class="iconos-herramientas">
-                <img src="resources/git-icon.png" alt="Git">
-                <img src="resources/github-icon.png" alt="GitHub">
-                <img src="resources/azureSQL-icon.png" alt="Azure SQL">
-              </div>
-          </div>
-        <div class="aprendizaje">
-            <h2>Aprendizaje continuo</h2>
-            <p>Siempre estoy dispuesto a aprender cosas nuevas y mantenerme actualizado en las últimas tendencias y tecnologías.</p>   
-        </div>
-      </main>
-      <footer>
-        <div class="footer-container">
-          <div class="up-section">
-            <div class="cita">
-              <cite>
-                Disfruta el camino, ayuda al projimo y aprende sobre lo concluido
-              </cite>
-            </div>
-            <div class="redes">
-              <a href="https://github.com/eliascando" target="_blank"><img src="resources/github-negative-icon.png" alt="GitHub"></a>
-              <a href="https://www.instagram.com/cando.elias/" target="_blank"><img src="resources/instagram-negative-icon.png" alt="Instagram"></a>
-              <a href="https://www.linkedin.com/in/eliascando/" target="_blank"><img src="resources/linkedin-negative-icon.png" alt="LinkedIn"></a>
-              <a href="mailto:elias.candoj@gmail.com" target="_blank"><img src="resources/mail-negative-icon.png" alt="Send Email"></a>
-          </div>
-          </div>
-          <div class="bottom-section">
-            <p>&copy; Elías Cando 2023</p>
-          </div>
-        </div>
-      </footer>
+      <div class="redes">
+        <a href="https://github.com/eliascando" target="_blank"><img src="resources/img/github-negative-icon.png" alt="GitHub"></a>
+        <a href="https://www.instagram.com/cando.elias/" target="_blank"><img src="resources/img/instagram-negative-icon.png" alt="Instagram"></a>
+        <a href="https://www.linkedin.com/in/eliascando/" target="_blank"><img src="resources/img/linkedin-negative-icon.png" alt="LinkedIn"></a>
+        <a href="mailto:elias.candoj@gmail.com" target="_blank"><img src="resources/img/mail-negative-icon.png" alt="Send Email"></a>
+      </div>
+      </div>
+      <div class="bottom-section">
+        <p>&copy; Elías Cando 2023</p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

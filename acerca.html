@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acerce de mí</title>
+    <title>Acerca de mí</title>
     <link rel="icon" type="png" href="resources/cando-logo-short.png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="resources/css/style.css">
+    <script type="module" src="index.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Signika+Negative&family=Trocchi&display=swap" rel="stylesheet">
@@ -15,7 +16,9 @@
 <body>
   <header>
     <div class="navbar">
-      <div class="logo-wide"><a href="index.html"><img src="resources/cando-logo-wide.png" alt="CanDo"></a></div>
+      <div class="logo-wide">
+        <a href="index.html"><img src="resources/img/cando-logo-wide.png" alt="CanDo"></a>
+      </div>
       <ul class="links">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="projects.html">Proyectos</a></li>
@@ -29,44 +32,33 @@
         <li><a href="projects.html">Proyectos</a></li>
         <li><a href="acerca.html">Acerca de mí</a></li>
       </div> 
-  </div> 
-  </header>
-    <script>
-      const toggleBtn = document.querySelector('.toggle_btn')
-      const toggleBtnIcon = document.querySelector('.toggle_btn i')
-      const dropDownMenu = document.querySelector('.dropdown_menu')
+    </div> 
+  </header> 
 
-      toggleBtn.onclick = function(){
-        dropDownMenu.classList.toggle('open')
-        const isOpen = dropDownMenu.classList.contains('open')
+  <main class="content">
+    <h1 class="aviso">Página en construccion...</h1>
+    <!--RESTO DE CONTENIDO-->
+  </main>
 
-        toggleBtnIcon.classList = isOpen
-        ? 'fa-solid fa-xmark'
-        : 'fa-solid fa-bars'
-      }   
-    </script>  
-    <main class="content">
-      <h1 class="aviso">Página en construccion...</h1>
-    </main>
-    <footer>
-        <div class="footer-container">
-            <div class="up-section">
-              <div class="cita">
-                <cite>
-                  Disfruta el camino, ayuda al projimo y aprende sobre lo concluido
-                </cite>
-              </div>
-              <div class="redes">
-                <a href="https://github.com/eliascando" target="_blank"><img src="resources/github-negative-icon.png" alt="GitHub"></a>
-                <a href="https://www.instagram.com/cando.elias/" target="_blank"><img src="resources/instagram-negative-icon.png" alt="Instagram"></a>
-                <a href="https://www.linkedin.com/in/eliascando/" target="_blank"><img src="resources/linkedin-negative-icon.png" alt="LinkedIn"></a>
-                <a href="mailto:elias.candoj@gmail.com" target="_blank"><img src="resources/mail-negative-icon.png" alt="Send Email"></a>
-            </div>
-            </div>
-            <div class="bottom-section">
-              <p>&copy; Elías Cando 2023</p>
-            </div>
-          </div>
-      </footer>
+  <footer>
+    <div class="footer-container">
+      <div class="up-section">
+        <div class="cita">
+          <cite>
+            Disfruta el camino, ayuda al projimo y aprende sobre lo concluido
+          </cite>
+        </div>
+        <div class="redes">
+          <a href="https://github.com/eliascando" target="_blank"><img src="resources/img/github-negative-icon.png" alt="GitHub"></a>
+          <a href="https://www.instagram.com/cando.elias/" target="_blank"><img src="resources/img/instagram-negative-icon.png" alt="Instagram"></a>
+          <a href="https://www.linkedin.com/in/eliascando/" target="_blank"><img src="resources/img/linkedin-negative-icon.png" alt="LinkedIn"></a>
+          <a href="mailto:elias.candoj@gmail.com" target="_blank"><img src="resources/img/mail-negative-icon.png" alt="Send Email"></a>
+        </div>
+      </div>
+      <div class="bottom-section">
+        <p>&copy; Elías Cando 2023</p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
